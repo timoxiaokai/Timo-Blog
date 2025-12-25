@@ -17,9 +17,9 @@ import { getTranslateLanguageFromConfig, detectBrowserLanguage } from "./utils/l
  */
 
 // 自动检测浏览器语言
-const SITE_LANG = detectBrowserLanguage("en"); // 服务端渲染时默认为 'en'
+const SITE_LANG = detectBrowserLanguage("zh"); // 服务端渲染时默认为 'en'
 // 如果需要强制使用特定语言，可以取消注释下面一行并设置语言代码
-const SITE_LANG = "zh"; // 强制使用的语言代码，'zh', 'en', 'ja' 等
+//const SITE_LANG = "zh"; // 强制使用的语言代码，'zh', 'en', 'ja' 等
 
 // 设置网站时区
 const SITE_TIMEZONE = 8; // from -12 to 12 default in UTC+8
