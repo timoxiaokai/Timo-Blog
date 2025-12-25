@@ -4,7 +4,7 @@ published: 2020-02-02
 description: This is an article for testing the page encryption feature
 encrypted: true
 pinned: false
-password: "123456"
+password: "1234567"
 routeName: "encrypted-example"
 tags: [Encryption]
 category: Examples
