@@ -1,5 +1,5 @@
-# About This Site
+# 关于本网站
 
-This website is built with the **Astro** framework using the [Twilight](https://github.com/Spr-Aachen/Twilight) template.
+本网站是以 **Astro** 框架使用 [Twilight](https://github.com/Spr-Aachen/Twilight) 模板。
 
 ::github{repo="Spr-Aachen/Twilight"}

@@ -77,29 +77,7 @@ export type SiteConfig = {
     wallpaper: {
         // 模式
         mode: "fullscreen" | "banner" | "none";
-        src: // 图片源配置 (fullscreen 和 banner 模式共享) 
-        | string
-        | string[]
-        | {
-            desktop?: string | string[];
-            mobile?: string | string[];
-        };
-        // 壁纸位置，等同于 object-position
-        position?: "top" | "center" | "bottom";
-        // 轮播配置 (fullscreen 和 banner 模式共享)
-        carousel?: {
-            // 为多张图片启用轮播，否则随机显示一张图片
-            enable: boolean;
-            // 轮播间隔时间 (s) 
-            interval: number;
-        };
-        // PicFlow API 配置 (fullscreen 和 banner 模式共享)
-        imageApi?: {
-            // 启用图片 API
-            enable: boolean;
-            // API 地址，返回每行一个图片链接的文本 (https://github.com/matsuzaka-yuki/PicFlow-API)
-            url: string;
-        };
+        showModeSwitchOnMobile?: "off" | "mobile" | "desktop" | "both"; // 整体布局方案切换按钮显示设置：off=隐藏，mobile=仅移动端，desktop=仅桌面端，both=全部显示
         // Banner 模式专属配置
         banner?: {
             homeText?: {
@@ -143,6 +121,31 @@ export type SiteConfig = {
                 performanceMode?: boolean;
             };
         };
+        src: // 图片源配置 (fullscreen 和 banner 模式共享)
+        | string
+        | string[]
+        | {
+            desktop?: string | string[];
+            mobile?: string | string[];
+        };
+        // 壁纸位置，等同于 object-position
+        position?: "top" | "center" | "bottom";
+        // 轮播配置 (fullscreen 和 banner 模式共享)
+        carousel?: {
+            // 为多张图片启用轮播，否则随机显示一张图片
+            enable: boolean;
+            // 轮播间隔时间 (s) 
+            interval: number;
+        };
+        // PicFlow API 配置 (fullscreen 和 banner 模式共享)
+        imageApi?: {
+            // 启用图片 API
+            enable: boolean;
+            // API 地址，返回每行一个图片链接的文本 (https://github.com/matsuzaka-yuki/PicFlow-API)
+            url: string;
+        };
+
+
         // Fullscreen 模式专属配置
         fullscreen?: {
             homeText?: {

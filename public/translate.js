@@ -22,7 +22,7 @@ var translate = {
 		当前使用的版本，默认使用v2. 可使用 setUseVersion2(); 
 		来设置使用v2 ，已废弃，主要是区分是否是v1版本来着，v2跟v3版本是同样的使用方式
 	*/
-	useVersion: "v2",
+	useVersion: "v3.2",
 	/*js translate.setUseVersion2 start*/
 	setUseVersion2: () => {
 		translate.useVersion = "v2";
@@ -65,14 +65,14 @@ var translate = {
 		*/
 		documentId: "translate",
 		/* 是否显示 select选择语言的选择框，true显示； false不显示。默认为true */
-		show: false,
+		show: true,
 		/* 
 			支持哪些语言切换
 			v1.x 版本包括：de,hi,lt,hr,lv,ht,hu,zh-CN,hy,uk,mg,id,ur,mk,ml,mn,af,mr,uz,ms,el,mt,is,it,my,es,et,eu,ar,pt-PT,ja,ne,az,fa,ro,nl,en-GB,no,be,fi,ru,bg,fr,bs,sd,se,si,sk,sl,ga,sn,so,gd,ca,sq,sr,kk,st,km,kn,sv,ko,sw,gl,zh-TW,pt-BR,co,ta,gu,ky,cs,pa,te,tg,th,la,cy,pl,da,tr 
 			v2.x 版本根据后端翻译服务不同，支持的语言也不同。具体支持哪些，可通过 http://api.translate.zvo.cn/doc/language.json.html 获取 （如果您私有部署的，将请求域名换为您自己私有部署的域名）
 		*/
-		languages: "",
-		alreadyRender: false, //当前是否已渲染过了 true为是 v2.2增加
+		languages: "zh-CN",
+		alreadyRender: true, //当前是否已渲染过了 true为是 v2.2增加
 		selectOnChange: (event) => {
 			var language = event.target.value;
 			translate.changeLanguage(language);
@@ -397,7 +397,7 @@ var translate = {
 
 		//用的是v2.x或更高
 		//translate.setUseVersion2();
-		translate.useVersion = "v2";
+		translate.useVersion = "v3.1";
 		//判断是否是第一次翻译，如果是，那就不用刷新页面了。 true则是需要刷新，不是第一次翻译
 		if (translate.to != null && translate.to.length > 0) {
 			//当前目标值有值，且目标语言跟当前语言不一致，那当前才是已经被翻译过的

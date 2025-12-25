@@ -385,7 +385,7 @@ function adjustMainContentPosition(mode: WALLPAPER_MODE | 'banner' | 'none' | 'f
         case 'fullscreen':
             // Fullscreen模式：使用紧凑布局，主内容从导航栏下方开始
             mainContent.classList.add('no-banner-layout');
-            mainContent.style.top = '5.5rem';
+            mainContent.style.top = '50.5rem';
             break;
         case 'none':
             // 无壁纸模式：主内容从导航栏下方开始

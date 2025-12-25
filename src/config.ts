@@ -80,33 +80,13 @@ export const siteConfig: SiteConfig = {
     wallpaper: {
         // 模式 ("banner" 横幅 | "fullscreen" 全屏 | "none" 纯色)
         mode: "fullscreen",
-        // 图片源配置 (fullscreen 和 banner 模式共享)
-        src: {
-            // 桌面壁纸图片 (支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
-            desktop: [
-                "/assets/desktop-banner/desktopBanner_1.webp",
-            ],
-            // 移动壁纸图片 (支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
-            mobile: [
-                "/assets/mobile-banner/mobileBanner_1.webp",
-            ],
-        },
-        // 壁纸位置 ('top' | 'center' | 'bottom')
-        position: "center",
-        // 轮播配置 (fullscreen 和 banner 模式共享)
-        carousel: {
-            // 为多张图片启用轮播，否则随机显示一张图片
-            enable: true,
-            // 轮播间隔时间 (秒)
-            interval: 3.3,
-        },
-        // PicFlow API 配置 (fullscreen 和 banner 模式共享)
-        imageApi: {
-            // 启用图片 API
-            enable: false,
-            // API 地址，返回每行一个图片链接的文本
-            url: "http://domain.com/api_v2.php?format=text&count=4",
-        },
+        // 整体布局方案切换按钮显示设置（默认："desktop"）
+        // "off" = 不显示
+        // "mobile" = 仅在移动端显示
+        // "desktop" = 仅在桌面端显示
+        // "both" = 在所有设备上显示
+        showModeSwitchOnMobile:"desktop",
+
         // Banner 模式专属配置
         banner: {
             // 横幅文本配置
@@ -153,17 +133,67 @@ export const siteConfig: SiteConfig = {
                 performanceMode: false,
             },
         },
+        // 图片源配置 (fullscreen 和 banner 模式共享)
+        src: {
+            // 桌面壁纸图片 (支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
+            desktop: [
+                "/assets/desktop-banner/desktopBanner_1.webp",
+            ],
+            // 移动壁纸图片 (支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
+            mobile: [
+                "/assets/mobile-banner/mobileBanner_1.webp",
+            ],
+        },
+        // 壁纸位置 ('top' | 'center' | 'bottom')
+        position: "center",
+        // 轮播配置 (fullscreen 和 banner 模式共享)
+        carousel: {
+            // 为多张图片启用轮播，否则随机显示一张图片
+            enable: true,
+            // 轮播间隔时间 (秒)
+            interval: 3.3,
+        },
+        // PicFlow API 配置 (fullscreen 和 banner 模式共享)
+        imageApi: {
+            // 启用图片 API
+            enable: false,
+            // API 地址，返回每行一个图片链接的文本
+            url: "https://domain.com/api_v2.php?format=text&count=4",
+        },
+
         // Fullscreen 模式专属配置
         fullscreen: {
+            // 横幅文本配置
+            homeText: {
+                // 在主页显示文本
+                enable: true,
+                // 主标题
+                title: "Timo",
+                // 副标题，支持单个字符串或字符串数组
+                subtitle: [
+                    "一个乐于分享的小博客",
+                ],
+                // 副标题打字机效果
+                typewriter: {
+                    // 启用副标题打字机效果
+                    enable: true,
+                    // 打字速度 (毫秒)
+                    speed: 111,
+                    // 删除速度 (毫秒)
+                    deleteSpeed: 51,
+                    // 完全显示后的暂停时间 (毫秒)
+                    pauseTime: 3000,
+                },
+            },
             // 层级
-            zIndex: -1, // 确保壁纸在背景层
+           zIndex: -1, // 确保壁纸在背景层
             // 壁纸透明度，0-1之间
-            opacity: 0.9,
+           opacity: 0.9,
             // 背景模糊程度 (像素值)
             blur: 1,
             // 导航栏透明模式
             navbar: {
-                transparentMode: "semi", // 使用半透明模式而不是完全透明
+                transparentMode: "semifull", // 使用半透明模式而不是完全透明
             },
         },
     },
@@ -358,9 +388,9 @@ export const profileConfig: ProfileConfig = {
     // 头像配置 (相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录)
     avatar: "assets/images/avatar.png",
     // 信息配置
-    name: "Twilight",
+    name: "Timo Blog",
     // 简介配置
-    bio: "Hi",
+    bio: "欢迎来到我的博客！！！！",
     // 链接配置
     links: [
         {
@@ -375,7 +405,7 @@ export const profileConfig: ProfileConfig = {
 // 公告配置
 export const announcementConfig: AnnouncementConfig = {
     // 公告标题
-    title: "Announcement",
+    title: "公告",
     // 公告内容
     content: "欢迎来到我的博客！！！",
     // 允许用户关闭公告

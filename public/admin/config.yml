@@ -6,112 +6,114 @@ backend:
   base_url: https://www.xn--cdwq63c.top # 请替换为您的 URL
   auth_endpoint: oauth # OAuth 路由由集成提供
 
+
 # 媒体文件配置
 media_folder: "public/images" # 媒体文件存储路径
 public_folder: "/images" # 公共访问路径
+
 
 # 集合配置
 collections:
   # 博客文章集合
   - name: "posts"
-    label: "Posts"
+    label: "文章"
     folder: "src/content/posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Published Date", name: "published", widget: "datetime"}
-      - {label: "Updated Date", name: "updated", widget: "datetime", required: false}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Cover", name: "cover", widget: "image", required: false}
-      - {label: "Tags", name: "tags", widget: "list", default: [], required: false}
-      - {label: "Category", name: "category", widget: "string", required: false}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布时间", name: "published", widget: "datetime"}
+      - {label: "更新时间", name: "updated", widget: "datetime", required: false}
+      - {label: "描述", name: "description", widget: "text", required: false}
+      - {label: "封面", name: "cover", widget: "image", required: false}
+      - {label: "标签", name: "tags", widget: "list", default: [], required: false}
+      - {label: "类别", name: "category", widget: "string", required: false}
+      - {label: "是否草稿", name: "draft", widget: "boolean", default: false}
+      - {label: "内容", name: "body", widget: "markdown"}
   # 项目集合
   - name: "projects"
-    label: "Projects"
+    label: "项目"
     folder: "src/data/projects"
     create: true
     slug: "{{slug}}"
     format: "json"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Category", name: "category", widget: "select", options: ["library","ai","software","website","game"] }
-      - { label: "Tech Stack", name: "techStack", widget: "list", default: [] }
-      - { label: "Status", name: "status", widget: "select", options: ["completed","in-progress","planned"] }
-      - { label: "Live Demo", name: "liveDemo", widget: "string", required: false }
-      - { label: "Source Code", name: "sourceCode", widget: "string", required: false }
-      - { label: "Start Date", name: "startDate", widget: "datetime" }
-      - { label: "End Date", name: "endDate", widget: "datetime", required: false }
-      - { label: "Featured", name: "featured", widget: "boolean", required: false, default: false }
-      - { label: "Tags", name: "tags", widget: "list", required: false, default: [] }
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "描述", name: "description", widget: "text" }
+      - { label: "图片", name: "image", widget: "image", required: false }
+      - { label: "类别", name: "category", widget: "select", options: ["library","ai","software","website","game"] }
+      - { label: "技术栈", name: "techStack", widget: "list", default: [] }
+      - { label: "现状", name: "status", widget: "select", options: ["completed","in-progress","planned"] }
+      - { label: "现场演示", name: "liveDemo", widget: "string", required: false }
+      - { label: "源代码", name: "sourceCode", widget: "string", required: false }
+      - { label: "开始日期", name: "startDate", widget: "datetime" }
+      - { label: "结束日期", name: "endDate", widget: "datetime", required: false }
+      - { label: "精选", name: "featured", widget: "boolean", required: false, default: false }
+      - { label: "标签", name: "tags", widget: "list", required: false, default: [] }
   # 技能集合
   - name: "skills"
-    label: "Skills"
+    label: "技能"
     folder: "src/data/skills"
     create: true
     slug: "{{slug}}"
     format: "json"
     fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Icon", name: "icon", widget: "string" }
-      - { label: "Category", name: "category", widget: "select", options: ["ai","backend","client","frontend","database","engines","tools","others"] }
-      - { label: "Level", name: "level", widget: "select", options: ["beginner","intermediate","advanced","expert"] }
-      - label: "Experience"
+      - { label: "名称", name: "name", widget: "string" }
+      - { label: "描述", name: "description", widget: "text" }
+      - { label: "图标", name: "icon", widget: "string" }
+      - { label: "类别", name: "category", widget: "select", options: ["ai","backend","client","frontend","database","engines","tools","others"] }
+      - { label: "水平", name: "level", widget: "select", options: ["beginner","intermediate","advanced","expert"] }
+      - label: "经验"
         name: "experience"
         widget: "object"
         fields:
-          - { label: "Years", name: "years", widget: "number", value_type: "int", min: 0 }
-          - { label: "Months", name: "months", widget: "number", value_type: "int", min: 0, max: 11 }
-      - { label: "Projects", name: "projects", widget: "list", required: false, default: [] }
-      - { label: "Certifications", name: "certifications", widget: "list", required: false, default: [] }
-      - { label: "Color", name: "color", widget: "string", required: false }
+          - { label: "年", name: "years", widget: "number", value_type: "int", min: 0 }
+          - { label: "月", name: "months", widget: "number", value_type: "int", min: 0, max: 11 }
+      - { label: "项目", name: "projects", widget: "list", required: false, default: [] }
+      - { label: "认证", name: "certifications", widget: "list", required: false, default: [] }
+      - { label: "颜色", name: "color", widget: "string", required: false }
   # 时间线集合
   - name: "timeline"
-    label: "Timeline"
+    label: "时间线"
     folder: "src/data/timeline"
     create: true
     slug: "{{slug}}"
     format: "json"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Type", name: "type", widget: "select", options: ["education","work","project","achievement"] }
-      - { label: "Start Date", name: "startDate", widget: "datetime" }
-      - { label: "End Date", name: "endDate", widget: "datetime", required: false }
-      - { label: "Location", name: "location", widget: "string", required: false }
-      - { label: "Organization", name: "organization", widget: "string", required: false }
-      - { label: "Position", name: "position", widget: "string", required: false }
-      - { label: "Skills", name: "skills", widget: "list", required: false, default: [] }
-      - { label: "Achievements", name: "achievements", widget: "list", required: false, default: [] }
-      - label: "Links"
-        name: "links"
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "描述", name: "description", widget: "text" }
+      - { label: "类型", name: "type", widget: "select", options: ["education","work","project","achievement"] }
+      - { label: "开始日期", name: "startDate", widget: "datetime" }
+      - { label: "结束日期", name: "endDate", widget: "datetime", required: false }
+      - { label: "位置", name: "location", widget: "string", required: false }
+      - { label: "单位", name: "organization", widget: "string", required: false }
+      - { label: "定位", name: "position", widget: "string", required: false }
+      - { label: "技能", name: "skills", widget: "list", required: false, default: [] }
+      - { label: "成就", name: "achievements", widget: "list", required: false, default: [] }
+      - label: "links"
+        name: "链接"
         widget: "list"
         required: false
         fields:
-          - { label: "Name", name: "name", widget: "string" }
+          - { label: "名字", name: "name", widget: "string" }
           - { label: "URL", name: "url", widget: "string" }
-          - { label: "Type", name: "type", widget: "select", options: ["certificate","project","other"] }
-      - { label: "Icon", name: "icon", widget: "string", required: false }
-      - { label: "Color", name: "color", widget: "string", required: false }
-      - { label: "Featured", name: "featured", widget: "boolean", required: false, default: false }
+          - { label: "类型", name: "type", widget: "select", options: ["certificate","project","other"] }
+      - { label: "图标", name: "icon", widget: "string", required: false }
+      - { label: "颜色", name: "color", widget: "string", required: false }
+      - { label: "精选", name: "featured", widget: "boolean", required: false, default: false }
   # 友链集合
   - name: "friends"
-    label: "Friends"
+    label: "友链"
     folder: "src/data/friends"
     create: true
     slug: "{{slug}}"
     format: "json"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Avatar URL", name: "imgurl", widget: "string" }
-      - { label: "Description", name: "desc", widget: "text" }
-      - { label: "Site URL", name: "siteurl", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list", required: false, default: [] }
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "头像 URL", name: "imgurl", widget: "string" }
+      - { label: "描述", name: "desc", widget: "text" }
+      - { label: "网站网址", name: "siteurl", widget: "string" }
+      - { label: "标签", name: "tags", widget: "list", required: false, default: [] }
 
 # 编辑器配置
 editor:

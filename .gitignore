@@ -7,6 +7,9 @@ node_modules/
 # generated types
 .astro/
 .vercel/
+.log
+.tmp
+.class
 
 # build output
 dist/
