@@ -145,6 +145,25 @@ export type SiteConfig = {
         };
         // Fullscreen 模式专属配置
         fullscreen?: {
+            homeText?: {
+                // 在主页显示文本
+                enable: boolean;
+                // 主标题
+                title?: string;
+                // 副标题
+                subtitle?: string | string[]; // 支持单个字符串或字符串数组
+                // 副标题打字机效果
+                typewriter?: {
+                    // 启用副标题打字机效果
+                    enable: boolean;
+                    // 打字速度 (ms)
+                    speed: number;
+                    // 删除速度 (ms)
+                    deleteSpeed: number;
+                    // 完全显示后的暂停时间 (ms)
+                    pauseTime: number;
+                };
+            };
             // 层级
             zIndex?: number;
             // 壁纸透明度，0-1 之间
