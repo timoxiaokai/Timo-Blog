@@ -155,6 +155,28 @@ export const siteConfig: SiteConfig = {
         },
         // Fullscreen 模式专属配置
         fullscreen: {
+            // 横幅文本配置
+            homeText: {
+                // 在主页显示文本
+                enable: true,
+                // 主标题
+                title: "Timo",
+                // 副标题，支持单个字符串或字符串数组
+                subtitle: [
+                    "一个乐于分享的小博客",
+                ],
+                // 副标题打字机效果
+                typewriter: {
+                    // 启用副标题打字机效果
+                    enable: true,
+                    // 打字速度 (毫秒)
+                    speed: 111,
+                    // 删除速度 (毫秒)
+                    deleteSpeed: 51,
+                    // 完全显示后的暂停时间 (毫秒)
+                    pauseTime: 3000,
+                },
+            },
             // 层级
             zIndex: -1, // 确保壁纸在背景层
             // 壁纸透明度，0-1之间
