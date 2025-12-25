@@ -61,7 +61,7 @@ export const siteConfig: SiteConfig = {
             // 作为全局字体
             enable: false,
         },
-        // Hanalei 字体 (适合中文)
+        // Hana lei 字体 (适合中文)
         hanalei: {
             // 作为全局字体
             enable: true,
@@ -175,7 +175,7 @@ export const siteConfig: SiteConfig = {
     // bangumi 配置
     bangumi: {
         // 用户 ID
-        userId: "your-bangumi-id", // 可以设置为 "sai" 测试
+        userId: "mn0725", // 可以设置为 "sai" 测试
     },
 };
 
