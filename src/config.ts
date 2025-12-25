@@ -17,9 +17,9 @@ import { getTranslateLanguageFromConfig, detectBrowserLanguage } from "./utils/l
  */
 
 // 自动检测浏览器语言
-const SITE_LANG = detectBrowserLanguage("en"); // 服务端渲染时默认为 'en'
+const SITE_LANG = detectBrowserLanguage("zh"); // 服务端渲染时默认为 'en'
 // 如果需要强制使用特定语言，可以取消注释下面一行并设置语言代码
-const SITE_LANG = "zh"; // 强制使用的语言代码，'zh', 'en', 'ja' 等
+//const SITE_LANG = "zh"; // 强制使用的语言代码，'zh', 'en', 'ja' 等
 
 // 设置网站时区
 const SITE_TIMEZONE = 8; // from -12 to 12 default in UTC+8
@@ -28,11 +28,11 @@ const SITE_TIMEZONE = 8; // from -12 to 12 default in UTC+8
 // 站点配置
 export const siteConfig: SiteConfig = {
     // 站点 URL（以斜杠结尾）
-    siteURL: "https://twilight.spr-aachen.com/", // 请替换为你的站点 URL 并以斜杠结尾
+    siteURL: "https://www.xn--cdwq63c.top/", // 请替换为你的站点 URL 并以斜杠结尾
     // 站点标题
-    title: "Twilight",
+    title: "Timo",
     // 站点副标题
-    subtitle: "Blog Template",
+    subtitle: "乐于分享的小博客",
     // 语言配置
     lang: SITE_LANG, // 自动检测的浏览器语言
     // 翻译配置
@@ -59,12 +59,12 @@ export const siteConfig: SiteConfig = {
         // zenMaruGothic 字体 (适合日语和英语，对中文适配一般)
         zenMaruGothic: {
             // 作为全局字体
-            enable: true,
+            enable: false,
         },
         // Hanalei 字体 (适合中文)
         hanalei: {
             // 作为全局字体
-            enable: false,
+            enable: true,
         },
     },
     // 主题色配置
@@ -75,11 +75,11 @@ export const siteConfig: SiteConfig = {
         fixed: false,
     },
     // 默认主题 ("system" 跟随系统 | "light" 浅色 | "dark" 深色)
-    defaultTheme: "dark",
+    defaultTheme: "system",
     // 壁纸配置
     wallpaper: {
         // 模式 ("banner" 横幅 | "fullscreen" 全屏 | "none" 纯色)
-        mode: "banner",
+        mode: "fullscreen",
         // 图片源配置 (fullscreen 和 banner 模式共享)
         src: {
             // 桌面壁纸图片 (支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
@@ -114,10 +114,10 @@ export const siteConfig: SiteConfig = {
                 // 在主页显示文本
                 enable: true,
                 // 主标题
-                title: "Twilight",
+                title: "Timo",
                 // 副标题，支持单个字符串或字符串数组
                 subtitle: [
-                    "Illuminate Our Paths",
+                    "一个乐于分享的小博客",
                 ],
                 // 副标题打字机效果
                 typewriter: {
@@ -196,13 +196,13 @@ export const navBarConfig: NavBarConfig = {
             children: [
                 {
                     name: "GitHub",
-                    url: "https://github.com/Example",
+                    url: "https://github.com/timoxiaokai",
                     external: true,
                     icon: "fa6-brands:github",
                 },
                 {
                     name: "Bilibili",
-                    url: "https://space.bilibili.com/Example",
+                    url: "https://space.bilibili.com/84061885",
                     external: true,
                     icon: "fa6-brands:bilibili",
                 },
@@ -366,7 +366,7 @@ export const profileConfig: ProfileConfig = {
         {
             name: "GitHub",
             icon: "fa6-brands:github",
-            url: "https://github.com/Spr-Aachen/Twilight",
+            url: "https://github.com/timoxiaokai/Timo-Blog",
         },
     ],
 };
@@ -377,7 +377,7 @@ export const announcementConfig: AnnouncementConfig = {
     // 公告标题
     title: "Announcement",
     // 公告内容
-    content: "Welcome to my blog!",
+    content: "欢迎来到我的博客！！！",
     // 允许用户关闭公告
     closable: true,
     // 链接配置
@@ -433,7 +433,7 @@ export const postConfig: PostConfig = {
             // 环境 ID
             envId: "https://twikoo.vercel.app",
             // 语言
-            lang: "en",
+            lang: "zh",
         },
     },
 };
