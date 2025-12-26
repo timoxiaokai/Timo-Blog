@@ -6,7 +6,8 @@ description: 如果你正在寻找一款**同时支持 BT / HTTP / FTP /
   Stable（比特彗星）依旧是 2025 年最值得安装的那一把“瑞士军刀”。
 tags:
   - BT
-  - 下载，种子
+  - 下载
+  - 种子
 category: Windows
 draft: false
 ---
