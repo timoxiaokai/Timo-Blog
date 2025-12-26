@@ -79,7 +79,7 @@ export const siteConfig: SiteConfig = {
     // 壁纸配置
     wallpaper: {
         // 模式 ("banner" 横幅 | "fullscreen" 全屏 | "none" 纯色)
-        mode: "fullscreen",
+        mode: "banner",
         // 整体布局方案切换按钮显示设置（默认："desktop"）
         // "off" = 不显示
         // "mobile" = 仅在移动端显示
