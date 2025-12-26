@@ -2,7 +2,7 @@
 title: STranslate2.0.3——即用即走的翻译、OCR工具「插件系统」
 published: 2025-12-26T18:45:00.000+08:00
 description: STranslate是一款轻量高效的多合一翻译与OCR工具，支持多语言输入翻译、划词翻译、截图翻译、剪贴板监听，并可同时显示多个翻译服务结果。
-cover: https://img.pidoutv.com/wp-content/uploads/2025/09/1757373155-2.webp
+cover: https://i.imgs.ovh/2025/12/26/Cx7CbN.png
 tags:
   - 翻译、OCR、插件
 category: 工具
