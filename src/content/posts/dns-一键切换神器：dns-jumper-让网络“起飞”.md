@@ -15,7 +15,9 @@ description: |-
   `控制面板 → 网络和共享中心 → 更改适配器设置 → IPv4 → 填写地址 → 确认`……  
   一套组合拳下来，五分钟没了，还生怕填错。
 cover: https://www.51dns.com/uploads/UEditorImages/201705/22/cbf2ae14666c6ca6a09111ed9d37a3a9.jpg
-tags: []
+tags:
+  - DNS
+category: windows
 draft: false
 ---
 ## 三分钟带你认识 Dns Jumper
