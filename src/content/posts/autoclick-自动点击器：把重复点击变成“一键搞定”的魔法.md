@@ -3,7 +3,11 @@ title: AutoClick 自动点击器：把重复点击变成“一键搞定”的魔
 published: 2025-12-26T21:32:00.000+08:00
 cover: https://www.souyuanzhan.com/wp-content/uploads/4774b46cce20251024095902.webp
 tags:
-  - 自动点击器，鼠标连点，自动化脚本，免费软件，Windows工具
+  - 自动点击器
+  - 鼠标连点
+  - 自动化脚本
+  - 免费软件
+  - Windows工具
 category: 效率工具
 draft: false
 ---
