@@ -4,7 +4,9 @@ published: 2025-12-26T18:45:00.000+08:00
 description: STranslate是一款轻量高效的多合一翻译与OCR工具，支持多语言输入翻译、划词翻译、截图翻译、剪贴板监听，并可同时显示多个翻译服务结果。
 cover: https://i.imgs.ovh/2025/12/26/Cx7CbN.png
 tags:
-  - 翻译、OCR、插件
+  - 翻译
+  - OCR
+  - 插件
 category: 工具
 draft: false
 ---
